@@ -121,7 +121,7 @@ a {
   border: 0.0625rem solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.3);
   padding: 0.5rem;
-  width: 22rem; /* Increased width to fit ToHit % and keep border visible */
+  width: 21rem;
   color: white;
   height: auto;
 }
@@ -175,24 +175,33 @@ a {
   font-size: 0.8125rem;
   color: white;
   text-shadow: -0.0625rem -0.0625rem 0 #000, 0 -0.0625rem 0 #000, 0.0625rem -0.0625rem 0 #000, 0.0625rem 0 0 #000, 0.0625rem 0.0625rem 0 #000, 0 0.0625rem 0 #000, -0.0625rem 0.0625rem 0 #000, -0.0625rem 0 0 #000;
-  flex: 1; /* Name takes available space */
+  flex: 1;
 }
 
-.dps-bar-damage {
+.dps-bar-damage-in-meter {
   font-size: 0.875rem;
-  color: #ffcc00; /* Yellow for visibility */
+  color: #ffcc00;
   text-shadow: -0.0625rem -0.0625rem 0 #000, 0 -0.0625rem 0 #000, 0.0625rem -0.0625rem 0 #000, 0.0625rem 0 0 #000, 0.0625rem 0.0625rem 0 #000, 0 0.0625rem 0 #000, -0.0625rem 0.0625rem 0 #000, -0.0625rem 0 0 #000;
   margin-right: 0.5rem;
-  width: 4.5rem; /* Slightly increased for large damage numbers */
+  width: 3.5rem; /* Reduced from 4.5rem */
+  text-align: right;
+}
+
+.dps-bar-critrate {
+  font-size: 0.875rem;
+  color: #ffcc00;
+  text-shadow: -0.0625rem -0.0625rem 0 #000, 0 -0.0625rem 0 #000, 0.0625rem -0.0625rem 0 #000, 0.0625rem 0 0 #000, 0.0625rem 0.0625rem 0 #000, 0 0.0625rem 0 #000, -0.0625rem 0.0625rem 0 #000, -0.0625rem 0 0 #000;
+  margin-right: 0.5rem;
+  width: 2rem;
   text-align: right;
 }
 
 .dps-bar-tohit {
   font-size: 0.875rem;
-  color: #66ccff; /* Light blue for visibility */
+  color: #66ccff;
   text-shadow: -0.0625rem -0.0625rem 0 #000, 0 -0.0625rem 0 #000, 0.0625rem -0.0625rem 0 #000, 0.0625rem 0 0 #000, 0.0625rem 0.0625rem 0 #000, 0 0.0625rem 0 #000, -0.0625rem 0.0625rem 0 #000, -0.0625rem 0 0 #000;
   margin-right: 0.5rem;
-  width: 3rem;
+  width: 2.5rem;
   text-align: right;
 }
 
@@ -200,7 +209,7 @@ a {
   font-size: 0.875rem;
   color: #9ddfa2;
   text-shadow: -0.0625rem -0.0625rem 0 #000, 0 -0.0625rem 0 #000, 0.0625rem -0.0625rem 0 #000, 0.0625rem 0 0 #000, 0.0625rem 0.0625rem 0 #000, 0 0.0625rem 0 #000, -0.0625rem 0.0625rem 0 #000, -0.0625rem 0 0 #000;
-  width: 4.5rem; /* Slightly increased for consistency */
+  width: 4.5rem;
   text-align: right;
 }
 
@@ -387,4 +396,33 @@ a {
 
 .zoom-btn:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+.toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+  color: white;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease-out, border-color 0.15s ease-out;
+  pointer-events: auto;
+}
+
+.toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.toggle-btn.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.toggle-icon {
+  line-height: 1;
 }
